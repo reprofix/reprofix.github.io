@@ -88,4 +88,82 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+
+/* ================= SLIDER MOVIL COMPLETO ================= */
+
+function initMobileReviewsSlider() {
+
+    if (window.innerWidth > 768) return;
+
+    const container = document.querySelector('.reviews-grid');
+    const cards = document.querySelectorAll('.review-card');
+
+    if (!container || cards.length === 0) return;
+
+    let index = 0;
+    let autoSlide;
+
+    // Crear contenedor de indicadores
+    const indicatorsContainer = document.createElement("div");
+    indicatorsContainer.classList.add("reviews-indicators");
+    container.parentNode.appendChild(indicatorsContainer);
+
+    // Crear puntitos
+    cards.forEach((_, i) => {
+        const dot = document.createElement("span");
+        if (i === 0) dot.classList.add("active");
+
+        dot.addEventListener("click", () => {
+            index = i;
+            updateSlider();
+            resetAutoSlide();
+        });
+
+        indicatorsContainer.appendChild(dot);
+    });
+
+    const dots = indicatorsContainer.querySelectorAll("span");
+
+    function updateSlider() {
+        container.scrollTo({
+            left: container.clientWidth * index,
+            behavior: 'smooth'
+        });
+
+        dots.forEach(dot => dot.classList.remove("active"));
+        dots[index].classList.add("active");
+    }
+
+    function startAutoSlide() {
+        autoSlide = setInterval(() => {
+            index++;
+            if (index >= cards.length) index = 0;
+            updateSlider();
+        }, 4000);
+    }
+
+    function stopAutoSlide() {
+        clearInterval(autoSlide);
+    }
+
+    function resetAutoSlide() {
+        stopAutoSlide();
+        startAutoSlide();
+    }
+
+    // Detectar swipe manual
+    container.addEventListener('scroll', () => {
+        index = Math.round(container.scrollLeft / container.clientWidth);
+        dots.forEach(dot => dot.classList.remove("active"));
+        dots[index].classList.add("active");
+    });
+
+    container.addEventListener('touchstart', stopAutoSlide);
+    container.addEventListener('touchend', startAutoSlide);
+
+    startAutoSlide();
+}
+
+initMobileReviewsSlider();
+
 });

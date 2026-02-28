@@ -369,3 +369,70 @@ body.modal-open {
     background: transparent;
     border: 1px solid #00c9d4;
 }
+
+/* ================= SLIDER RESEÑAS MOVIL ================= */
+
+@media (max-width: 768px) {
+
+    .reviews-grid {
+        display: flex;
+        overflow: hidden;
+        scroll-behavior: smooth;
+    }
+
+    .review-card {
+        flex: 0 0 100%;
+        margin-right: 0;
+    }
+
+}
+
+/* ================= SLIDER RESEÑAS MOVIL ================= */
+
+@media (max-width: 768px) {
+
+    .reviews-grid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none; /* Firefox */
+    }
+
+    .reviews-grid::-webkit-scrollbar {
+        display: none; /* Chrome */
+    }
+
+    .review-card {
+        flex: 0 0 100%;
+        scroll-snap-align: start;
+    }
+
+}
+
+/* ================= INDICADORES SLIDER MOVIL ================= */
+
+@media (max-width: 768px) {
+
+    .reviews-indicators {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        gap: 8px;
+    }
+
+    .reviews-indicators span {
+        width: 8px;
+        height: 8px;
+        background: #444;
+        border-radius: 50%;
+        transition: 0.3s ease;
+        cursor: pointer;
+    }
+
+    .reviews-indicators span.active {
+        background: #00c9d4;
+        transform: scale(1.3);
+    }
+
+}
