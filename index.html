@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ReproFix | Reparación y Reprogramación de ECUs</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+
+<!-- HERO CON LOGO A LA IZQUIERDA -->
+
+<section class="hero">
+    <!-- LOGO a la izquierda -->
+    <img src="img/logo.webp" alt="ReproFix Logotipo" class="hero-logo">
+
+    <div class="hero-content">
+        <!-- BOTÓN centrado -->
+        <a class="btn" href="https://wa.me/34661277738" target="_blank">
+            Solicitar Diagnóstico
+        </a>
+    </div>
+</section>
+
+<!-- SERVICIOS -->
+
+<section>
+    <h2>Servicios</h2>
+
+    <div class="services">
+
+        <div class="card" data-service="clonacion">
+            <img src="img/clonacion.webp" 
+                 alt="Clonación profesional de ECU" 
+                 loading="lazy">
+            <div class="card-content">
+                <h3>Clonación de ECU</h3>
+                <p>Transferencia completa de datos para reemplazo seguro y totalmente funcional.</p>
+            </div>
+        </div>
+
+        <div class="card" data-service="reparacion">
+            <img src="img/reparacion.webp" 
+                 alt="Reparación electrónica de centralitas" 
+                 loading="lazy">
+            <div class="card-content">
+                <h3>Reparación Electrónica</h3>
+                <p>Diagnóstico interno y reparación de fallas en centralitas y cuadros automotrices.</p>
+            </div>
+        </div>
+
+        <div class="card" data-service="stage1">
+            <img src="img/stage1.webp" 
+                 alt="Reprogramación Stage 1 ECU" 
+                 loading="lazy">
+            <div class="card-content">
+                <h3>Reprogramación</h3>
+                <p>Optimización y ajustes personalizados del software de inyección electrónica.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- POR QUÉ ELEGIRNOS -->
+
+<section>
+    <h2>¿Por qué elegirnos?</h2>
+
+    <div class="process">
+        <div>✔ Equipamiento profesional y herramientas especializadas</div>
+        <div>✔ Experiencia técnica comprobada</div>
+        <div>✔ Trabajo preciso y garantizado</div>
+        <div>✔ Atención rápida y personalizada</div>
+    </div>
+</section>
+
+<!-- RESEÑAS GOOGLE -->
+
+<section class="reviews">
+    <h2>Opiniones de nuestros clientes</h2>
+
+    <div class="reviews-grid">
+
+        <a href="https://share.google/p2qjudsDYUcGUYVLR" target="_blank" class="review-card">
+            <p>"Respuesta rápida, tuve un problema con la bsi y me lo solucionaron. Da gusto encontrar gente tan profesional"</p>
+            <div class="stars">★★★★★</div>
+            <span>— Rubén A.</span>
+        </a>
+
+        <a href="https://share.google/qFRgR41igW03xhcEW" target="_blank" class="review-card">
+            <p>"muy buena gente, servicio rápido e eficiente, me ha solucionado muchos fallos de averia que tenia en mi coche. recomiendo"</p>
+            <div class="stars">★★★★★</div>
+            <span>— Luciano C.</span>
+        </a>
+
+        <a href="https://share.google/wNtI7uEz3t18bQa7V" target="_blank" class="review-card">
+            <p>"Trabaja regularmente para nuestro taller, le derivamos problemas con ecu, egr, dpf, adblue... Responde en el mismo día y sin problemas."</p>
+            <div class="stars">★★★★★</div>
+            <span>— Paco G.</span>
+        </a>
+
+        <a href="https://share.google/nJMnq69Ykd725unvb" target="_blank" class="review-card">
+            <p>"Taller de total confianza y Sergio es un artista. Muy recomendable."</p>
+            <div class="stars">★★★★★</div>
+            <span>— Jorge H.</span>
+        </a>
+
+        <a href="URL_RESEÑA_5" target="_blank" class="review-card">
+            <p>"El mejor de Valencia. Nadie sabia arreglarme la radio de mi peugeot 3008. Todos querian cambiarme todo el aparato. Gracias Sergio. Eres un crack."</p>
+            <div class="stars">★★★★★</div>
+            <span>— Carlos J.</span>
+        </a>
+
+        <a href="https://share.google/a38JAMH3bJmDsI5MF" target="_blank" class="review-card">
+            <p>"Muy buen profesional, arreglo la avería rápido y el coche va perfecto, 100% recomendable."</p>
+            <div class="stars">★★★★★</div>
+            <span>— Aida G.</span>
+        </a>
+
+    </div>
+</section>
+
+<!-- CTA FINAL -->
+
+<section class="cta">
+    <h2>¿Tu ECU presenta fallas?</h2>
+    <p style="margin:20px 0 30px;">Contáctanos ahora y recibe asesoramiento técnico inmediato.</p>
+    <a class="btn" href="https://wa.me/34661277738" target="_blank">
+        Hablar por WhatsApp
+    </a>
+</section>
+
+<footer>
+    © 2026 ReproFix | Electrónica Automotriz Profesional
+</footer>
+
+<!--MODAL JS-->
+
+<div id="serviceModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3 id="modalTitle"></h3>
+        <ul id="modalList"></ul>
+
+        <div class="modal-buttons">
+            <a id="whatsappBtn" target="_blank" class="btn">
+             Contactar por WhatsApp
+            </a>
+        </div>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>

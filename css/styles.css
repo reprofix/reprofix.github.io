@@ -1,0 +1,371 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #0d1117;
+    color: white;
+    line-height: 1.5;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    position: relative;
+    padding: 200px 20px 60px 20px;
+    display: flex;
+    justify-content: center; /* centra el contenido principal */
+    align-items: center;
+    text-align: center;
+
+    background:
+        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+        url("../img/fondo.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-content p {
+    font-size: 22px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* LOGO pegado a la izquierda */
+.hero-logo {
+    position: absolute;
+    left: 80px;       /* margen desde el borde izquierdo */
+    top: 50%;         /* centrado verticalmente */
+    transform: translateY(-50%);
+    max-width: 260px; /* tamaño máximo del logo */
+    width: auto;
+    height: auto;
+}
+
+/* BOTÓN centrado en hero */
+.hero-content {
+    z-index: 2; /* para estar encima del logo si se superpone */
+}
+
+/* Responsive del logo */
+@media (max-width: 1024px) {
+    .hero-logo {
+        max-width: 150px;
+        left: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-logo {
+        max-width: 130px;
+        left: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-logo {
+        max-width: 100px;
+        left: 10px;
+    }
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 35px;
+    background: #00f7ff;
+    color: black;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #00c9d4;
+    transform: scale(1.05);
+}
+
+/* ================= SECCIONES ================= */
+
+section {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h2 {
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* ================= SERVICIOS ================= */
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.card {
+    background: #161b22;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 25px;
+    transition: 0.3s;
+}
+
+.card-content h3 {
+    color: #00c9d4;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.card-content p {
+    text-align: center;
+    font-size: 16px;
+    opacity: 0.85;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px rgba(0, 247, 255, 0.3);
+}
+
+/* ================= RESEÑAS ================= */
+
+.reviews {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.review-card {
+    background: #111;
+    padding: 30px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s ease;
+    border: 1px solid #1f1f1f;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    border-color: #00c9d4;
+    box-shadow: 0 0 20px rgba(0, 201, 212, 0.2);
+}
+
+.review-card p {
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.review-card span {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.stars {
+    color: #00c9d4;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+/* ================= LISTAS ================= */
+
+.process {
+    display: grid;
+    gap: 20px;
+}
+
+.process div {
+    background: #161b22;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* ================= CTA ================= */
+
+.cta {
+    text-align: center;
+    background: #111827;
+    border-radius: 12px;
+    padding: 60px 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+/* ================= MEDIA QUERIES ================= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .hero {
+        padding: 180px 20px 50px 20px;
+    }
+    .hero-content p {
+        font-size: 20px;
+    }
+}
+
+/* Móviles */
+@media (max-width: 768px) {
+    .hero {
+        padding: 120px 20px 40px 20px;
+    }
+    .hero-content p {
+        font-size: 18px;
+    }
+
+    .services {
+        gap: 25px;
+    }
+
+    .card img {
+        height: 180px;
+    }
+
+    section {
+        padding: 60px 15px;
+    }
+}
+
+/* Smartphones muy pequeños */
+@media (max-width: 480px) {
+    .hero {
+        padding: 100px 10px 30px 10px;
+    }
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .card img {
+        height: 150px;
+    }
+}
+
+/* ================= MODAL ================= */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background: #111;
+    margin: 8% auto;
+    padding: 40px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 600px;
+    color: white;
+    border: 1px solid #00c9d4;
+    animation: fadeIn 0.3s ease;
+    position: relative;
+}
+
+.modal-content h3 {
+    color: #00c9d4;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.modal-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.modal-content li {
+    padding: 10px 0;
+    border-bottom: 1px solid #222;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 5px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #00c9d4;
+    transition: 0.2s ease;
+}
+
+.close:hover {
+    transform: scale(1.2);
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(-20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+.modal-buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.secondary-btn {
+    background: transparent;
+    border: 1px solid #00c9d4;
+}
+
+.modal-buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.secondary-btn {
+    background: transparent;
+    border: 1px solid #00c9d4;
+}
