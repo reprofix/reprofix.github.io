@@ -80,6 +80,10 @@ a {
     max-width: 260px; /* tamaño máximo del logo */
     width: auto;
     height: auto;
+    opacity: 0.6;
+    filter: 
+        drop-shadow(0 0 20px rgba(0, 0, 0, 1))
+        drop-shadow(0 0 40px rgba(0, 0, 0, 0.9));
 }
 
 /* BOTÓN centrado en hero */
