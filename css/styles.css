@@ -68,6 +68,7 @@ a {
 .hero-content2 p {
     font-size: 16px;
     margin-bottom: 30px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.7);
     opacity: 0.9;
 }
 
@@ -103,6 +104,7 @@ a {
     .hero-logo {
         max-width: 130px;
         left: 15px;
+        opacity: 0.1;
     }
 }
 
