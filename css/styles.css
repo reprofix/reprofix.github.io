@@ -145,6 +145,31 @@ h2 {
     margin-bottom: 50px;
 }
 
+/* ================= H2 SEO ================= */
+
+.seo-box {
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    width: 100%;
+    padding: 25px 30px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
+    backdrop-filter: blur(6px);
+    text-align: center;
+    margin-bottom: 40px;
+
+}
+
+.seo-box h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.seo-box p {
+    font-size: 1rem;
+    opacity: 0.85;
+}
+
 /* ================= SERVICIOS ================= */
 
 .services {

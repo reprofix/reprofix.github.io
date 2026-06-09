@@ -30,14 +30,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 "Diagnóstico avanzado"
             ]
         },
-        stage1: {
+        reprogramacion: {
             title: "Reprogramación",
             items: [
-                "Stage 1 seguro",
-                "EGR, DPF, AdBlue, IMMO OFF",
-                "Airbag Reset",
-                "DTC OFF",
-                "Soluciones personalizadas"
+                "Solución de errores electrónicos",
+                "Eliminación de fallos DTC",
+                "Configuración de sistemas electrónicos",
+                "Adaptación de unidades",
+                "Soluciones técnicas personalizadas"
             ]
         }
     };
